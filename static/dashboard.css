@@ -1,0 +1,60 @@
+.dashboard-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-brown);
+}
+
+.dashboard-title {
+    color: var(--color-white);
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.logout-btn {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.dashboard-main {
+    padding: 40px 20px;
+}
+
+.cv-upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cv-file-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.cv-file-input {
+    margin-bottom: 20px;
+}
+
+.upload-btn {
+    padding: 10px 20px;
+    background-color: var(--color-brown);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.upload-btn:hover {
+    background-color: var(--color-indianred);
+}

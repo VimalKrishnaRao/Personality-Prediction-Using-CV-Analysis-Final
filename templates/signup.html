@@ -1,0 +1,71 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+</head>
+<body>
+    <h1>Sign Up Page</h1>
+    <a href="{{url_for('login')}}">Already have an account? Login</a>
+
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.first_name }}
+        {{ form.last_name }}
+        {{ form.username }}
+        {{ form.password }}
+        {{ form.submit }}
+    </form>
+
+    
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}"> 
+  </head>
+  <body>
+    <div class="desktop-1">
+      <main class="intersect-parent">
+        <img class="intersect-icon" src="{{ url_for('static', filename='asset.png') }}" alt="Image">
+
+        <section class="rectangle-parent">
+          <div class="frame-child"></div>
+          <div class="create-account-wrapper">
+            <h1 class="create-account">Sign Up</h1>
+          </div>
+          <!--<button class="admin-signup" onclick="location.href=''">Signup as Recruiter</button>-->
+          <form class="frame-parent" method="POST" action="{{ url_for('signup') }}">
+            {{ form.hidden_tag() }}
+            <div class="rectangle-group">
+              {{ form.first_name(class="frame-item", placeholder="First Name") }}
+              {{ form.last_name(class="frame-inner", placeholder="Last Name") }}
+            </div>
+            {{ form.username(class="rectangle-input", placeholder="Username or email") }}
+            {{ form.password(class="frame-child1", placeholder="Password") }}
+            <div class="frame-group">
+              <button class="create-account-container" type="submit">
+                <b class="create-account1">Create Account</b>
+              </button>
+              <div class="frame-container">
+                <div class="already-have-an-account-parent">
+                  <div class="already-have-an">Already have an account?</div>
+                  <div class="login-here" id="loginHereText"><a href="{{url_for('login')}}">Login here</a></div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
